@@ -7,11 +7,11 @@ const App = () => {
     firstname: '',
     lastname: '',
     email: '',
+    phoneNumber: '',
     password: '',
     confirmPassword: '',
     gender: '',
     dob: '',
-    phoneNumber: ''
   });
 
   const handleChange = (e) => {
@@ -83,7 +83,15 @@ const App = () => {
           onChange={handleChange}
           required
         />
-
+        <label htmlFor="phoneNumber">Phone Number:</label>
+        <input
+          type="tel"
+          id="phoneNumber"
+          name="phoneNumber"
+          value={formData.phoneNumber}
+          onChange={handleChange}
+          required
+        />
         <label htmlFor="password">Password:</label>
         <input
           type="password"
@@ -127,16 +135,7 @@ const App = () => {
           onChange={handleChange}
           required
         />
-        <label htmlFor="phoneNumber">Phone Number:</label>
-        <input
-          type="tel"
-          id="phoneNumber"
-          name="phoneNumber"
-          value={formData.phoneNumber}
-          onChange={handleChange}
-          required
-        />
-
+      
         <button type="submit">Register</button>
       </form>
     </div>
