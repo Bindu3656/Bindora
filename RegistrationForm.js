@@ -4,7 +4,8 @@ import './RegistrationForm.css';
 
 const App = () => {
   const [formData, setFormData] = useState({
-    name: '',
+    firstname: '',
+    lastname: '',
     email: '',
     password: '',
     confirmPassword: '',
@@ -54,11 +55,21 @@ const App = () => {
     <div className="container">
       <h2>REGISTRATION FORM</h2>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="name">Name:</label>
+        <label htmlFor="firstname">First Name:</label>
         <input
           type="text"
-          id="name"
-          name="name"
+          id="first name"
+          name="first name"
+          value={formData.name}
+          onChange={handleChange}
+          required
+        />
+
+        <label htmlFor="lastname">Last Name:</label>
+        <input
+          type="text"
+          id="last name"
+          name="last name"
           value={formData.name}
           onChange={handleChange}
           required
