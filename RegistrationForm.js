@@ -10,7 +10,6 @@ const App = () => {
     confirmPassword: '',
     gender: '',
     dob: '',
-    address: '',
     phoneNumber: ''
   });
 
@@ -117,16 +116,6 @@ const App = () => {
           onChange={handleChange}
           required
         />
-
-        <label htmlFor="address">Address:</label>
-        <textarea
-          id="address"
-          name="address"
-          value={formData.address}
-          onChange={handleChange}
-          required
-        ></textarea>
-
         <label htmlFor="phoneNumber">Phone Number:</label>
         <input
           type="tel"
